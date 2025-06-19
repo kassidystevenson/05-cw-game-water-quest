@@ -226,20 +226,38 @@ h1 img {
   box-shadow: 0 0 0 4px #2E9DF7, 0 2px 12px #ffc90755;
 }
 .water-can {
-  width: 100%;
-  height: 100%;
-  background-image: url('https://cdn.jsdelivr.net/gh/charitywater/assets@main/jerrycan-yellow.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background: #FFC907;
+  border-radius: 6px;
+  border: 2.5px solid #e6b800;
+  box-shadow: 0 2px 8px #ffc90755;
+  display: block;
+  /* Remove SVG icon, use yellow square */
+  background-image: none;
+  /* ...existing code... */
   animation: popUp 0.5s cubic-bezier(0.17, 0.67, 0.34, 2);
-  transform-origin: center;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
   transition: box-shadow 0.2s, border 0.2s;
+}
+
+/* Red X feedback styling */
+.red-x-feedback {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #F5402C;
+  text-shadow: 0 2px 8px #fff, 0 1px 2px #F5402C55;
+  pointer-events: none;
+  z-index: 10;
+  animation: fadeX 0.5s linear;
+  user-select: none;
+}
+
+@keyframes fadeX {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.3);}
 }
 
 /* Obstacle styling */
