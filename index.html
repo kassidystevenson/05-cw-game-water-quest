@@ -9,11 +9,14 @@
 <body>
   <div class="container">
     <h1>Water Quest</h1>
-    <p class="game-instructions">Collect 20 items to complete the game!</p>
+    <p class="game-instructions">
+      Tap the yellow jerry cans to earn points! Avoid decoy items. Reach milestones for surprises!
+    </p>
     <div class="stats">
       <p>Cans Collected: <span id="current-cans">0</span></p>
       <p>Time Left: <span id="timer">30</span>s</p>
     </div>
+    <div id="feedback-message" class="feedback-message" aria-live="polite"></div>
     <div id="achievements" class="achievement"></div>
     <div class="game-grid"></div>
     <button id="start-game">Start Game</button>
